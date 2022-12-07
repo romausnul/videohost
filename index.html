@@ -1,0 +1,392 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <title>
+    Goclo Video-Hosting
+</title>
+
+    <meta property="og:site_name" content="Vimple">
+    <meta property="og:url" content="http://vimple.ru/">
+    <meta property="og:title" content="Vimple - video hosting for business">
+    <meta property="og:description" content="Vimple is cloud video hosting optimized for video!">
+    <meta property="og:image" content="images/logo.png">
+
+    <meta name="google-site-verification" content="fwHQMO4Rvsf7XXqlq3_B36gCEu6VA1HdLcYMRHDkBeY">
+
+    
+    <meta name="description" content="Работает на RM Cloud Data">
+    <meta name="keywords" content="">
+
+
+    <link rel="alternate" hreflang="x-default" href="https://vimple.ru/">
+    <link rel="alternate" hreflang="ru" href="https://vimple.ru/ru-RU/">
+    <link rel="alternate" hreflang="en" href="https://vimple.ru/en-US/">
+    <link rel="alternate" hreflang="es" href="https://vimple.ru/es-ES/">
+    
+    <link href="css/main.min.css" rel="stylesheet" type="text/css">
+	<script src="js/json2.js" type="text/javascript"></script>	
+	
+
+</head>
+<body>
+    <div id="main-wrapper" class="main">
+    </ul>
+
+<div id="loader">
+	<img src="images/loader.gif" class="nodisplay">
+</div>
+
+<div id="main-content" class="js-main-content">
+    <div class="main-wrapper">
+        <div class="file-wrapper">
+            <input type="file" name="file" multiple="true" id="file-field" class="upload-file js-upload-watcher">
+            <label for="file-field" class="button upload-file-btn">Upload video</label>
+        </div>
+        <p class="maximum-size js-maximum-size"><span>*</span> File size limit 1 GB</p>
+        <div id="alert" class="nodisplay">
+            <div class="alert-msg-container">
+                <div id="alert-title">File size exceeds 1GB!</div>
+            </div>
+        </div>
+        <div class="three-steps">
+            <div class="step1 left">
+                <div></div>
+                <p>Upload files</p>
+            </div>
+            <div class="step2 left">
+                <div></div>
+                <p>Get the code</p>
+            </div>
+            <div class="step3 left">
+                <div></div>
+                <p>Add to your website</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+<div id="multi-upload" class="nodisplay js-multi-upload">
+           
+<div class="upload-head">
+    <div class="left">
+        <div class="file-wrapper">
+            <input type="file" name="file" multiple="true" id="file-field-2" class="upload-file js-upload-watcher">
+            <label for="file-field-2" class="button upload-file-btn">Add a Video</label>
+        </div>
+    </div>
+    <div class="right upload-info">
+        <span>Total files: <label id="total-label" class="js-total-label">0</label></span>
+        <span>Uploaded: <label id="uploaded-label" class="js-uploaded-label">0</label></span>
+        <span>Errors: <label id="total-errors-label" class="js-total-errors-label">0</label></span>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div id="multi-upload-block" class="js-multi-upload-block"></div>
+<div id="standart-upload-block" class="js-standart-upload-block"></div>
+<div id="copy-link-block" class="nodisplay js-copy-link-window">
+    <div class="js-close close right"></div>
+    <div class="clear"></div>
+    <p class="js-copy-to-clip-mes">Copied text to clipboard</p>
+    <h3 class="js-link-type"></h3>
+    <textarea class="js-link-code"></textarea>
+</div>
+
+
+
+
+</div>
+
+<div class="js-drop-panel drop-panel nodisplay">
+    <div>
+        <p class="add-video-title">Add video</p>
+        <p>Maximum file size 1 Gb</p>
+    </div>
+</div>
+
+
+
+
+        </div>
+        <div class="footer main">
+
+    <div class="footer-container">
+
+        
+
+        
+        <div class="contacts">© 2022-2022 Goclo</div>
+        <ul class="bottom-menu">
+         
+            <li><a href="/video/rmclouddata">RM Cloud Data</a></li>
+            <li><a href="/video/adv">Хостинг провайдер</a></li>
+            <li><a href="/video/website">Браузер</a></li>
+            <li><a href="/video/dev">Для ПРОГЕРОВ</a></li>
+        </ul>
+        <div class="footer-other">
+            
+               
+
+            
+
+
+
+
+<div id="open-language-panel">
+    <ul id="language-panel">
+
+        <li class="es "><a href="javascript:void(0);" title="Spanish" rel="es">ES</a></li>
+        <li class="en selected"><a href="javascript:void(0);" title="English" rel="en">EN</a></li>
+        <li class="ru "><a href="javascript:void(0);" title="Русский" rel="ru">RU</a></li>
+
+    </ul>
+    <span class="olp-btn">
+        
+        EN
+        
+
+    </span>
+
+</div>
+            <div class="clear"></div>
+        </div>
+
+
+
+
+
+
+
+        <div class="clear"></div>
+    </div>
+        </div>
+    </div>
+
+    <div id="general-error">Sorry, the service is temporarily unavailable. Give it a few minutes and try again..</div>
+
+
+        <div id="popup-container">
+            <div class="popup auth-popup" id="bind-authorization-popup"></div>
+        </div>
+        <div id="overlay-shadow" class="overlay-shadow"></div>
+    <script src="js/jquery.js"></script>
+
+    <script src="js/passwordvalidate.js" type="text/javascript"></script>
+    <script src="js/authorization.js" type="text/javascript"></script>
+    <script src="js/common.js" type="text/javascript"></script>
+    <script src="js/base.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        var locUrl = location.pathname;
+        $("#top-menu [href='" + locUrl + "']").parent().addClass('this-page');
+        $(".bottom-menu [href='" + locUrl + "']").addClass('this-page');
+    </script>
+    <script type="text/javascript" src="js/metrika.js"></script>
+    
+<script type="text/template" id="upload-wait-template">
+    <div class="video-upload js-video-upload">
+        <div class="upload-wait">
+            <div class="left upload-status-icon"></div>
+            <div class="left upload-container">
+                <div class="left file-name js-file-name">
+                    <span class="js-file-name-container file-name-container left"></span>
+                    <a href="javascript:void(0)" class="js-edit-name-btn button left"></a>
+                </div>
+                <div class="left nodisplay js-file-name-input-container">
+                    <input type="text" value="" class="js-file-name-input file-name-input" />
+                    <a href="javascript:void(0)" class="js-confirm-name-btn confirm-name-btn">Ok</a>
+                </div>
+                <div class="right cancel js-cancel"></div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="upload-finished-template">
+    <div class="video-upload js-video-upload">
+        <div class="upload-finished">
+            <input type="hidden" name="upload_id" />
+            <input type="hidden" name="title" />
+            <div class="left upload-status-icon"></div>
+            <div class="left upload-container">
+                <div class="left file-name js-file-name">
+                    <span class="js-file-name-container file-name-container left"></span>
+                    <a href="javascript:void(0)" class="js-edit-name-btn button left"></a>
+                </div>
+                <div class="left nodisplay js-file-name-input-container">
+                    <input type="text" value="" class="js-file-name-input file-name-input" />
+                    <a href="javascript:void(0)" class="js-confirm-name-btn confirm-name-btn">Ok</a>
+                </div>
+                <div class="right cancel js-cancel"></div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div>
+                <div class="status left">
+                    <span class="js-size-container"></span>
+                    <span class="js-copy-link-container">
+                        <span class="js-copy-tooltip copy-tooltip nodisplay">Copy</span>
+                        <a href="javascript:void(0)" class="js-copy-iframe-link nodisplay">iframe-code</a>
+                    </span>
+                    <span class="js-copy-link-container">
+                        <span class="js-copy-tooltip copy-tooltip nodisplay">Copy</span>
+                        <a href="javascript:void(0)" class="js-copy-embed-link nodisplay">embed-code</a>
+                    </span>
+                    <span class="js-copy-link-container">
+                        <span class="js-copy-tooltip copy-tooltip nodisplay">Copy</span>
+                        <a href="javascript:void(0)" class="js-copy-direct-link nodisplay">direct link</a>
+                    </span>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="multi-upload-template">
+    <div class="video-upload js-video-upload">
+        <div class="upload-process">
+            <input type="hidden" name="title" />
+            <div class="left upload-status-icon"></div>
+            <div class="left upload-container">
+                <div class="left file-name">
+                    <span class="left js-file-name-container file-name-container"></span>
+                </div>
+                <div class="right cancel js-cancel"></div>
+                <div class="right">
+                    <span class="size-container js-size-container">0</span>
+                    <span class="file-uploaded-percent js-percent-container">0</span>%
+                </div>
+                <div class="progress">
+                    <div class="js-progress-val"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="upload-deleted-template">
+    <div class="video-upload js-video-upload">
+        <div class="upload-deleted">
+            <div class="left upload-status-icon"></div>
+            <div class="left upload-container">
+                <div class="left file-name">
+                    <span class="js-file-name-container file-name-container left"></span>
+                    <span class="left video-deleted">Video deleted</span>
+                    <a href="javascript:void(0)" class="js-upload-restore-btn upload-restore-btn left">Restore</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="upload-error-template">
+    <div class="video-upload js-video-upload">
+        <div class="upload-error">
+            <div class="left upload-status-icon"></div>
+            <div class="left upload-container">
+                <div class="left file-name">
+                    <span class="js-file-name-container file-name-container left"></span>
+                    <a href="javascript:void(0)" class="js-upload-restore-btn upload-restore-btn left">Да блять опять сервак упал нахуй пиздей</a>
+                </div>
+                <div class="right cancel js-cancel"></div>
+                <div class="js-size-error size-error right nodisplay">File size exceeds 1GB</div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="standart-upload-form-template">
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="upload-file" value="" class="js-standart-file-input" />
+    </form>
+</script>
+    <script async="async" src="js/jquery.zclip.js" type="text/javascript"></script>
+    <script src="js/home.js" type="text/javascript"></script>
+    <script src="multi-upload-v2.0"></script>
+
+    <script type="text/javascript">
+        multiUpload.Init({
+            downloadsCount: 1,
+            threadsCount: 50,
+            getUploadDataUrl: '/Upload/GetUploadData',
+            getVideoLinkUrl: '/Home/GetLinks',
+            multiUploadTemplateSelector: '#multi-upload-template',
+            zclipPath: '/Content/swf/ZeroClipboard.swf',
+            updateVideoUrl: '/Home/UpdateVideo'
+        });
+
+        
+
+    </script>
+   
+
+        <script type="text/javascript">
+        $(document).ready(function () {
+
+            function inArray(value, array) {
+                for (var i = 0; i < array.length; i++) {
+                    if (array[i] == value) return true;
+                }
+                return false;
+            }
+
+            $("#language-panel li :not(a.selected)").click(function () {
+                $.ajax({
+                    url: '/Home/SwitchLanguage',
+                    data: "language=" + $(this).attr("rel"),
+                    type: "POST",
+                    success: function (data) {
+                        var lenguageSegments = ["ru-ru","en-us","es-es"]
+                        var segments = document.location.pathname.split("/", 2);
+                        if (segments.length > 1 && inArray(segments[1].toLowerCase(), lenguageSegments)){
+                            var location = document.location.href.replace("/" + segments[1], "");
+                            document.location = location;
+                        }
+                        else
+                            document.location.reload();
+                    }
+                });
+            });
+
+
+
+
+
+            $(document).on('click', function (event) {
+                if ($(event.target).closest("#open-language-panel").length) return;
+                $("#language-panel").removeClass("expand");
+                event.stopPropagation();
+            });
+                    
+            $("#open-language-panel").on("click", function () {
+                $("#language-panel").toggleClass("expand");
+            });
+            $("#language-panel li a.selected").parent().prependTo("#language-panel");
+        });
+    </script>
+
+    <script type="text/javascript">
+        Authorization.init({
+            AuthorizationFormUrl: '/account/GetAutorizationForm',
+            RegistrationFormUrl: '/account/GetRegistrationForm',
+            ForgotPasswordFormUrl: '/account/GetForgotPasswordForm'
+        });
+    </script>
+
+    
+
+
+
+
+
+
+</body></html>

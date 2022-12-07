@@ -1,0 +1,1 @@
+function setInnerHTML(e,n){e.innerHTML=n}function setOuterHTML(e,n){if(e.outerHTML)e.outerHTML=n;else{var r=function(e){e.parentNode&&e.parentNode.removeChild(e)},t=document.createElement("body");if(n){if(e.parentNode){for(t.innerHTML=n;t.firstChild;)e.parentNode.insertBefore(t.firstChild,e);r(e)}}else r(e)}}
